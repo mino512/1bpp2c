@@ -10,7 +10,7 @@ Those image formats take up an extraordinary amount of space on the microcontrol
   - 1bpp  = (width\*height)/8
   - 16bpp  = (width\*height*2) 
   - 24bpp  = (width\*height*3) 
-  - 32bpp  = (width\*height*3) 
+  - 32bpp  = (width\*height*4) 
  
 #### Example:  
 - `256 x 128` @ 1bpp → **4,096 bytes**  
