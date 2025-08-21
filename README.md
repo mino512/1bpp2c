@@ -1,3 +1,24 @@
+Working with microcontrollers often means squeezing every last byte of memory. One of the biggest challenges is simply getting bitmaps into your code efficiently.  
+
+It’s often the case that a simple user interface is preferred on a microcontroller requiring only 2-color images for output on devices like
+LED-arrays, LCD, OLED, etc...
+
+While there are online tools for converting images into code, I discovered that online code converters only seem to produce 16bpp, 24bpp, and 32bpp formats.
+Those image formats take up an extraordinary amount of space on the microcontroller and are limited to high-color displays.
+
+###### Formula:
+  - 1bpp  = (width\*height)/8
+  - 16bpp  = (width\*height*2) 
+  - 24bpp  = (width\*height*3) 
+  - 32bpp  = (width\*height*3) 
+ 
+#### Example:  
+- `256 x 128` @ 1bpp → **4,096 bytes**  
+- The same image at only 16bpp → **65,536 bytes** (!)
+
+That’s a **16× memory saving**. Perfect for microcontrollers.  
+
+#### The solution: 1bpp2c
 
 `1bpp2c` takes a **(1bpp) .bmp file** and converts it into **C code array** that can be used with a wide range of compilers and environments, including:
 - Arduino IDE  
@@ -45,5 +66,3 @@ Input: `logo.bmp` (1bpp)
 > 0xff, 0xff, 0xff, 
 >
 > };
-
-
