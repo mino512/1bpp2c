@@ -45,21 +45,8 @@ Input: `logo.bmp` (1bpp)
 > #define BMP_HEIGHT 128
 
 
-> // Bit order: MSB first.
->
 > unsigned char bmp_data[] = {
 >
 > 0x7A, 0x31, 0x37, // ...
->
-> };
-
-
-> // color order: blue, green, red
->
-> unsigned char default_pal[] = {
->
-> 0x00, 0x00, 0x00, 
->
-> 0xff, 0xff, 0xff, 
 >
 > };
